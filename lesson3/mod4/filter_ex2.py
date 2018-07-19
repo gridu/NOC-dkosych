@@ -23,5 +23,5 @@ else:
 			print("Catch  %s" % e, file=sys.stderr)
 			continue
 		process_file(file)
-		close(file)
+		file.close()
 
