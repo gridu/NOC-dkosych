@@ -1,0 +1,17 @@
+acs ansible_host=192.168.33.10 ansible_user=vagrant
+web1 ansible_host=192.168.33.20 username=ansible_user ansible_user=vagrant
+db1 ansible_host=192.168.33.30 ansible_user=vagrant
+
+[webservers]
+web1
+
+[dbservers]
+db1
+
+[datacenter:children]
+webservers
+dbservers
+
+[datacenter:vars]
+ansible_user=vagrant
+

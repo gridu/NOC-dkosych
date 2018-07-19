@@ -1,0 +1,12 @@
+web1 ansible_host=192.168.33.20
+db1 ansible_host=192.168.33.30
+
+[webservers]
+web1
+
+[dbservers]
+db1
+
+[datacenter:children]
+webservers
+dbservers
