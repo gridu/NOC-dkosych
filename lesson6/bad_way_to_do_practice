@@ -1,0 +1,17 @@
+1. Create machine in AWS with autoinstall Docker (add #include https://get.docker.io)
+
+2. On VM create Dockerfile:
+	FROM jenkins/jenkins:lts
+	RUN /usr/local/bin/install-plugins.sh job-dsl
+
+3. Create Docker image:
+	sudo docker build -t jenkins_plugin .
+
+4. List all image in system and find our:
+	sudo docker images
+
+5. Run this image
+	sudo docker run -p 8080:8080 --name=jenkins_plugin jenkins_plugin
+
+   Use -d for launch like a demon.
+

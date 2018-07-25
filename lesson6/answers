@@ -1,0 +1,10 @@
+1. When we use virtualization, we have hypervisor in host machine, and it distributes resources between VM. VM has its OS, its disk volume (it's a file in host machine), RAM that hypervisor give form host's RAM etc.
+Containerization is a technology when all containers use one kernel - kernel from host's OS. Container isolated from other using built-in functions of OS.
+
+2. Container use less disk space.
+   Container start faster then VM. It's important in case of re-load crashed app.
+   Distribution app in container is easier then using VM.
+
+3. When something happens with kernel, it affects all container in machine.
+
+4. It's usefull for microservice architecture. 
