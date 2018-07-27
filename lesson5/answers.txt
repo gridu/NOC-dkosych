@@ -1,0 +1,17 @@
+1. In Java, developer write one code and this code can run on a different machines. And Dev can not thinks about many things like free memory. JVm is responsible for this two useful features.
+
+2. Stack is a LIFO memory structure. In JVM stack use for store primitive variable, local varible that is a point to object(non-primitive variable) and method's call. JVM create one stack to each thread.
+   Heap is a chunk of memory where store all objects.
+
+3. -Xmx - max size of the heap
+   -Xms - initial size of the heap
+   -Xss - stack size on one thread
+   -Xmn - initial and maximum size of the heap for the young generation
+
+4. Garbage collection(GC) is a process that free memory from objects that does not use. More precisely, it delete objects that can't be used. JVM start GC then some conditions is true. Developer can use system.gc(), but it is not command, it's request for GC. It can start after that, but it is not obliged to do it.
+
+5. New generation(Eden, S0, S1) and old generation is a parts of heap. In new generation(Eden) add a new objects, when memory is completed GC start its work and objects move to S0, S1 and, after few GC call, to old generation. It is mean that new generation contains recently created objects. It is important because in new and old generations GC works different.
+
+6. There are two different strategest of GC with many impelentation. First is a tracing GC. Special alghorithm tracying call each object and delete then object is unreahable. Other strategest is a reference countiong, when all objects have a number of pointer of this. When this number is 0, object deleted.
+
+7. Because in old and young generations object has different probability that it must be deleted by GC.
